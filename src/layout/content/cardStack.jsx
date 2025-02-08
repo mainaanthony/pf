@@ -8,7 +8,7 @@ const CardStack = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveCard((prev) => (prev < 4 ? prev + 1 : prev));
-    }, 3000); // Change cards every 3 seconds
+    }, 2000); // Change cards every 2 seconds
 
     return () => clearInterval(interval);
   }, []);
