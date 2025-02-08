@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    .flex.items-center {
+      justify-content: center !important;
+    }
+    .width-45 {
+      width: 90% !important;
+      text-align: center !important;
+    }
+  }
+  

@@ -1,4 +1,24 @@
-#root {
+
+
+html, body {
+  height: 100%;
+  overflow-y: auto;
+  background-image: url('./assets/blueee.jpg');
+  background-size: cover; /* Scale the SVG to cover the screen */
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+
+
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +59,27 @@
 
 .read-the-docs {
   color: #888;
+
+
+
+
+
+
+
+
+
+
+
+
+//for learning purposes only
+///for firefox
+  html, body {
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none; 
 }
+/// For Chrome, Safari, and Opera 
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none; 
+}
+} */
