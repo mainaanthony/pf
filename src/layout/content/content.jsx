@@ -13,7 +13,7 @@ const Content = () => {
                 <button className="mt-8 bg-[#AC4746] text-white font-bold px-4 py-2 rounded-md">
                 Download my CV
                </button>
-               <img className="max-w-100 mx-auto mt-8 rounded-full shadow-lg sm:max-w-150" src={systemImage} alt="Software Engineer"
+               <img className="max-w-70 mx-auto mt-8 rounded-full shadow-lg sm:max-w-150" src={systemImage} alt="Software Engineer"
                 style={{
                      maskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))",
                         WebkitMaskImage:
