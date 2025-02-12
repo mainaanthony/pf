@@ -9,17 +9,17 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Positions Of Interest</h3>
           <ul className="space-y-2">
             {[
-              "React Js Developer",
-              "Node Js Developer",
-              "Angular Developer",
-              ".Net Developer",
-              "Full Stack Developer",
-            ].map((position, index) => (
+              { id: 1, title: "React Js Developer" },
+              { id: 2, title: "Node Js Developer" },
+              { id: 3, title: "Angular Developer" },
+              { id: 4, title: ".Net Developer" },
+              { id: 5, title: "Full Stack Developer" },
+            ].map((position) => (
               <li
-                key={index}
+                key={position.id}
                 className="bg-[#112B3C] rounded-lg py-2 px-4 text-center"
               >
-                {position}
+                {position.title}
               </li>
             ))}
           </ul>
@@ -46,33 +46,47 @@ const Footer = () => {
               payment methods that allow us to carry out great projects, without
               cost being a barrier.
             </p>
-            <button className="bg-white text-[#0A1E2E] font-semibold py-2 px-4 rounded-lg">
+            <a
+              href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Meeting+with+Anthony+M.+Maina&dates=20250212T100000Z/20250212T110000Z&details=Let's+discuss+your+project!&location=Google+Meet"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-[#0A1E2E] font-semibold py-2 px-4 rounded-lg inline-block"
+            >
               Schedule a meeting
-            </button>
+            </a>
+
           </div>
         </div>
       </div>
 
-   {/* Contact via Email */}
-   <div className="mt-10 text-center">
-        <button className="bg-[#1E88E5] text-white font-semibold py-2 px-6 rounded-lg hover:bg-[#1565C0]">
+     {/* Contact via Email */}
+     <div className="mt-10 text-center">
+        <a
+          href="mailto:mainaathonymwai@gmail.com"
+          className="bg-[#1E88E5] text-white font-semibold py-2 px-6 rounded-lg hover:bg-[#1565C0] inline-block"
+        >
           Contact Me Via Email
-        </button>
+        </a>
       </div>
       
       {/* Footer Bottom Section */}
       <div className="mt-10 text-center border-t border-gray-700 pt-6">
-        <p className="text-sm text-gray-400">
-          This website has been designed and developed by me:)
-        </p>
-        <p className="text-sm text-gray-400 mt-2">
-          Copyright ©{" "}
-          <a href="https://yourwebsite.com" className="text-blue-400">
-            Anthony M. Maina
-          </a>{" "}
-          2024
-        </p>
-      </div>
+  <p className="text-sm text-gray-400">
+    This website has been designed and developed by me:)
+  </p>
+  <p className="text-sm text-gray-400 mt-2">
+    Copyright ©{" "}
+    <a 
+      href="https://x.com/tony_m_miley" 
+      className="text-blue-400" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      Anthony M. Maina
+    </a>{" "}
+    2024
+  </p>
+</div>
     </footer>
   );
 };
