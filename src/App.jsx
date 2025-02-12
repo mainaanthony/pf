@@ -22,7 +22,7 @@ const MainLayout = () => {
 
 function App() {
   return (
-    <Router>
+    <Router basseName="/pf">
       <Routes>
         {/* CV page (no header/footer) */}
         <Route path="/pf/cv" element={<CVPage />} />
