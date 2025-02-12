@@ -1,5 +1,5 @@
 // src/App.jsx
-import { HashRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import './App.css';
 import Content from './layout/content/content';
 import Footer from './layout/footer/footer';
