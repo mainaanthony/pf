@@ -22,19 +22,19 @@ const MainLayout = () => {
 
 function App() {
   return (
-    <Router basename="/pf">
+    <Router basename='/pf/' >
       <Routes>
         {/* CV page (no header/footer) */}
-        <Route path="/pf/cv" element={<CVPage />} />
+        <Route path="/cv" element={<CVPage />} />
         
         {/* Main site pages (with header/footer) */}
-        <Route path="/pf/" element={<MainLayout />}>
+        <Route path="/" element={<MainLayout />}>
           {/* Default route (Home/Content) */}
           <Route index element={<Content />} />
           {/* Contact page */}
-          <Route path="/pf/contact" element={<Contact />} />
+          <Route path="contact" element={<Contact />} />
           {/* Portfolio Page */}
-          <Route path="/pf/portfolio" element={<Portfolio />} />
+          <Route path="portfolio" element={<Portfolio />} />
         </Route>
       </Routes>
     </Router>

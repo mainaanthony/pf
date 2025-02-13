@@ -11,7 +11,7 @@ const Header = () => {
       
       {/* Logo - Clickable on large screens */}
       <div className="logo">
-        <Link to="/pf/" className="hidden md:block">
+        <Link to="/" className="hidden md:block">
           <div className="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center border-2 border-white bg-gradient-to-r from-gray-800 to-gray-600 shadow-lg cursor-pointer">
             <span className="text-white font-bold text-lg md:text-2xl">AM</span>
           </div>
@@ -26,9 +26,9 @@ const Header = () => {
       {/* Navigation (hidden on small screens, shown on large screens) */}
       <nav className="hidden md:block">
         <ul className="flex flex-row space-x-6 ml-10">
-          <li><Link to="/pf/" className="hover:underline">Home</Link></li>
-          <li><Link to="/pf/portfolio" className="hover:underline">Portfolio</Link></li>
-          <li><Link to="/pf/contact" className="hover:underline">Contact</Link></li>
+          <li><Link to="/" className="hover:underline">Home</Link></li>
+          <li><Link to="/portfolio" className="hover:underline">Portfolio</Link></li>
+          <li><Link to="/contact" className="hover:underline">Contact</Link></li>
         </ul>
       </nav>
 

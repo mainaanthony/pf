@@ -12,7 +12,7 @@ const Content = () => {
                 <p className="font-semibold mt-8">Making every click an amazing innovation through Design and Code.  </p>
                 <CardStack />
                 <Link 
-                  to="/pf/cv" 
+                  to="/cv" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="mt-8 inline-block"
