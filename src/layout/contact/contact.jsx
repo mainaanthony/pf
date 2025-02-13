@@ -104,6 +104,7 @@ const Contact = () => {
       {/* Social Media Links */}
       <div className="mt-6 sm:mt-8 text-center text-gray-400 flex flex-col md:flex-row gap-2 sm:gap-4 items-center">
         <p>INSTAGRAM: @tony_miley</p>
+        <p>TWITTER:@tony_m_miley</p>
       </div>
     </div>
   );
