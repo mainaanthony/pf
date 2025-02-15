@@ -44,9 +44,9 @@ const Header = () => {
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-black bg-opacity-90 p-6 flex flex-col items-center space-y-4 md:hidden">
-          <Link to="/pf/" className="text-white text-lg" onClick={() => setIsMenuOpen(false)}>Home</Link>
-          <Link to="/pf/portfolio" className="text-white text-lg" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
-          <Link to="/pf/contact" className="text-white text-lg" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+          <Link to="/" className="text-white text-lg" onClick={() => setIsMenuOpen(false)}>Home</Link>
+          <Link to="/portfolio" className="text-white text-lg" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
+          <Link to="/contact" className="text-white text-lg" onClick={() => setIsMenuOpen(false)}>Contact</Link>
           <a href="https://www.fiverr.com/sellers/anthonymwai/edit" target="_blank" rel="noopener noreferrer">
             <button className="bg-[#AC4746] text-white font-bold px-4 py-2 rounded-md">
               Hire Me
