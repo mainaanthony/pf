@@ -1,12 +1,15 @@
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
 import './App.css';
-import Content from './layout/content/content';
 import Footer from './layout/footer/footer';
 import Header from './layout/header/header';
-import CVPage from './layout/content/cv';
-import Contact from './layout/contact/contact';
-import Portfolio from './layout/portfolio/portfolio';
+
+// Lazy load the components
+const Content = lazy(() => import('./layout/content/content'));
+const CVPage = lazy(() => import('./layout/content/cv'));
+const Contact = lazy(() => import('./layout/contact/contact'));
+const Portfolio = lazy(() => import('./layout/portfolio/portfolio'));
 
 // MainLayout component for pages with Header and Footer
 const MainLayout = () => {
@@ -23,20 +26,22 @@ const MainLayout = () => {
 function App() {
   return (
     <Router basename='/pf/' >
-      <Routes>
-        {/* CV page (no header/footer) */}
-        <Route path="/cv" element={<CVPage />} />
-        
-        {/* Main site pages (with header/footer) */}
-        <Route path="/" element={<MainLayout />}>
-          {/* Default route (Home/Content) */}
-          <Route index element={<Content />} />
-          {/* Contact page */}
-          <Route path="contact" element={<Contact />} />
-          {/* Portfolio Page */}
-          <Route path="portfolio" element={<Portfolio />} />
-        </Route>
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          {/* CV page (no header/footer) */}
+          <Route path="/cv" element={<CVPage />} />
+          
+          {/* Main site pages (with header/footer) */}
+          <Route path="/" element={<MainLayout />}>
+            {/* Default route (Home/Content) */}
+            <Route index element={<Content />} />
+            {/* Contact page */}
+            <Route path="contact" element={<Contact />} />
+            {/* Portfolio Page */}
+            <Route path="portfolio" element={<Portfolio />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </Router>
   );
 }
