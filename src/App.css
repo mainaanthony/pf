@@ -9,6 +9,17 @@ html, body {
  background-attachment: fixed;
 }
 
+.bg-custom-gradient {
+  background: linear-gradient(
+    to bottom,
+    #0a0f1a,
+    #08111c 80%,
+    #050c15 100%
+  );
+  background-size: cover;
+  filter: contrast(1.2) brightness(0.9);
+}
+
 
 /* #root {
   max-width: 1280px;

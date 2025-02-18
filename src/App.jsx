@@ -14,7 +14,7 @@ const Portfolio = lazy(() => import('./layout/portfolio/portfolio'));
 
 
 const LoadingScreen = () => (
-  <div className="flex flex-col items-center justify-center h-screen bg-blue-950 text-white"
+  <div className="flex flex-col items-center justify-center h-screen bg-custom-gradient text-white"
   >
     <LoaderCircle className="animate-spin w-12 h-12 mb-4" />
     <p className="text-lg font-semibold">Anthony&apos;s World is loading...</p>
