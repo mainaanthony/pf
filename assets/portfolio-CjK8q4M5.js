@@ -1,0 +1,1 @@
+import{j as e}from"./index-BtNW7l4U.js";const s=()=>e.jsx("div",{className:"flex items-center justify-center h-screen  text-white",children:e.jsx("h1",{className:"text-4xl font-bold",children:"Coming Soon"})});export{s as default};
