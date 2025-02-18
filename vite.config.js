@@ -9,4 +9,8 @@ export default defineConfig({
     react(),
   ],
   base: "/pf/",
+  build: {
+    cssCodeSplit: false,
+    assetsInlineLimit: 4096,
+  }
 })
