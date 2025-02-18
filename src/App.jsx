@@ -4,12 +4,21 @@ import { Suspense, lazy } from 'react';
 import './App.css';
 import Footer from './layout/footer/footer';
 import Header from './layout/header/header';
+import { LoaderCircle } from 'lucide-react';
 
 // Lazy load the components
 const Content = lazy(() => import('./layout/content/content'));
 const CVPage = lazy(() => import('./layout/content/cv'));
 const Contact = lazy(() => import('./layout/contact/contact'));
 const Portfolio = lazy(() => import('./layout/portfolio/portfolio'));
+
+
+const LoadingScreen = () => (
+  <div className="flex flex-col items-center justify-center h-screen bg-blue-900 text-white">
+    <LoaderCircle className="animate-spin w-12 h-12 mb-4" />
+    <p className="text-lg font-semibold">Anthony&apos;s World is loading...</p>
+  </div>
+);
 
 // MainLayout component for pages with Header and Footer
 const MainLayout = () => {
@@ -26,7 +35,7 @@ const MainLayout = () => {
 function App() {
   return (
     <Router basename='/pf/' >
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadingScreen />}>
         <Routes>
           {/* CV page (no header/footer) */}
           <Route path="/cv" element={<CVPage />} />
